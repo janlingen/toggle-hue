@@ -6,6 +6,7 @@ simple python script to toggle your Philips hue lights with speech recognition
 
 - install needed packages
   - `pip install -r requirements.txt`
+  - if you encounter problems installing PyAudio take a look here: https://cs.gmu.edu/~marks/112/projects/PlaySong.pdf
 - get the of your Philips Hue Bridge and export it as enviroment variable
   - example: `export IP=127.0.0.1`
 - get a Philips hue bridger user and export it as enviroment variable
