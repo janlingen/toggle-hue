@@ -14,3 +14,8 @@ simple python script to toggle your Philips hue lights with speech recognition
 - run `python hue.py`
 - the default trigger name is called `sarah`
   - example call: `sarah light` to toggle your lights on/off
+
+## customizing the script
+
+- if you would like to add or remove lights, edit the function run_sarah
+- if you would like to change the trigger name, edit the function take_command
