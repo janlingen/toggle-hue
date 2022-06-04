@@ -47,18 +47,21 @@ def take_command():
                 return command
             else:
                 return "empty"
-    except:
-        return "empty"
+    except Exception as e:
+        print(e)
+        return False
 
 
 def run_sarah(hue):
     command = take_command()
-    print(command)
-    if 'light' in command:
-        hue.toggle_light(1)
-        hue.toggle_light(2)
-    else:
-        print('Please say the command again.')
+    while command != False:
+        print(command)
+        if 'light' in command:
+            hue.toggle_light(1)
+            hue.toggle_light(2)
+        else:
+            print('Please say the command again.')
+    print("Something went wrong!")
 
 
 if __name__ == "__main__":
@@ -66,5 +69,4 @@ if __name__ == "__main__":
     IP = getenv("IP")
     HUE_USER = getenv("HUE_USER")
     hue = Hue(IP, HUE_USER)
-    while True:
-        run_sarah(hue)
+    run_sarah(hue)
